@@ -4,6 +4,14 @@
     <script>
       const canvas=document.createElement('canvas');
       document.body.appendChild(canvas);
+      canvas.width=window.innerWidth-10;
+      canvas.height=window.innerHeight-10;
+      canvas.style.background='#000';
+      var functions=[];
+      function draw(){
+        functions.forEach((i)=>{i()})
+      }
+      setInterval(draw,25)
     </script>
   </body>
 </html>
